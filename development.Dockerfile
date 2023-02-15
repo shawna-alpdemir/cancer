@@ -1,7 +1,7 @@
 # Use with:
 # docker build -f development.Dockerfile -t crowds-cure/cancer:dev-latest .
 
-FROM node:11.2.0-slim
+FROM node:14.21.2-slim
 
 RUN apt-get update && apt-get install -y git
 RUN mkdir /usr/src/app
