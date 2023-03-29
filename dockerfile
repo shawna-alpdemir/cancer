@@ -20,7 +20,7 @@ RUN npm run build
 
 # Stage 2: Bundle the built application into a Docker container
 # which runs Nginx using Alpine Linux
-FROM nginx:1.15.5-alpine
+FROM nginx:stable-alpine
 RUN rm -rf /etc/nginx/conf.d
 COPY conf /etc/nginx
 COPY --from=builder /usr/src/app/build /usr/share/nginx/html
